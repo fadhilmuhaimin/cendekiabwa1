@@ -1,7 +1,3 @@
 export default function AppLayout() {
-    return (
-        <div>
-            Ini App Layout
-        </div>
-    )
+    return <div>Ini App Layout</div>;
 }

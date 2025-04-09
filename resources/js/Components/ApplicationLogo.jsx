@@ -9,8 +9,8 @@ export default function ApplicationLogo({ url = '#', size = 'size-9', isTitle = 
 
             {isTitle && (
                 <div className="flex flex-col">
-                    <span className="text-foreground leading-none font-bold">Cendekia</span>
-                    <span className="text-muted-foreground text-xs font-medium">Pengetahuan Tanpa Batas</span>
+                    <span className="font-bold leading-none text-foreground">Cendekia</span>
+                    <span className="text-xs font-medium text-muted-foreground">Pengetahuan Tanpa Batas</span>
                 </div>
             )}
         </Link>

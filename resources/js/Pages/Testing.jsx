@@ -1,9 +1,5 @@
-import AppLayout from "@/Layouts/AppLayout";
+import AppLayout from '@/Layouts/AppLayout';
 
 export default function Testing() {
-    return(
-        <AppLayout>
-            Ini Adalah Testing
-        </AppLayout>
-    )
+    return <AppLayout>Ini Adalah Testing</AppLayout>;
 }
