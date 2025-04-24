@@ -22,7 +22,7 @@ const buttonVariants = cva(
                 purple: 'text-white bg-gradient-to-r from-purple-500 via-purple-500 to-purple-600',
             },
             size: {
-                default: 'h-9 <px-4></px-4> py-2',
+                default: 'h-9 px-4 py-2',
                 sm: 'h-8 rounded-md px-3 text-xs',
                 lg: 'h-10 rounded-md px-8',
                 xl: 'h-12 rounded-md px-8',
