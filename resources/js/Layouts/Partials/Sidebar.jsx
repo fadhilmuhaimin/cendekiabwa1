@@ -57,7 +57,14 @@ export default function Sidebar({ url, auth }) {
             <div className="px-3 py-2 text-sm font-semibold text-foreground">Lainnya</div>
             <NavLink url="#" title="Pengumuman" icon={IconAlertCircle} />
             <NavLink url={route('profile.edit')} title="Profile" icon={IconUser} />
-            <NavLink url={route('logout')} title="Logout" icon={IconLogout} method='post' as='button' className='w-full' />
+            <NavLink
+                url={route('logout')}
+                title="Logout"
+                icon={IconLogout}
+                method="post"
+                as="button"
+                className="w-full"
+            />
         </nav>
     );
 }

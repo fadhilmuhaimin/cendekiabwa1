@@ -59,7 +59,12 @@ export default function SidebarResponsive({ url, auth }) {
                 <div className="px-3 py-2 text-sm font-semibold text-foreground">Lainnya</div>
                 <NavLinkResponsive url="#" title="Pengumuman" icon={IconAlertCircle} />
                 <NavLinkResponsive url={route('profile.edit')} title="Profile" icon={IconUser} />
-                <NavLinkResponsive url="#" title="Logout" icon={IconLogout} />
+                <NavLinkResponsive  url={route('logout')}
+                title="Logout"
+                icon={IconLogout}
+                method="post"
+                as="button"
+                className="w-full" />
             </nav>
         </nav>
     );
