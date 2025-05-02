@@ -68,9 +68,6 @@ export default function Register() {
 
                                     {errors.email && <InputError message={errors.email} />}
                                 </div>
-
-                                
-
                                 <div className="grid gap-2">
                                     <Label htmlFor="password">Password</Label>
 
