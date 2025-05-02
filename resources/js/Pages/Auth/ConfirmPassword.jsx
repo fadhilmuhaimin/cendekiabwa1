@@ -2,6 +2,11 @@ import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
+import { Button } from '@/Components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/Components/ui/card';
+import { Input } from '@/Components/ui/input';
+import { Label } from '@/Components/ui/label';
+import AppLayout from '@/Layouts/AppLayout';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, useForm } from '@inertiajs/react';
 
@@ -10,7 +15,7 @@ export default function ConfirmPassword() {
         password: '',
     });
 
-    const submit = e => {
+    const onHandleSubmit = e => {
         e.preventDefault();
 
         post(route('password.confirm'), {
@@ -19,18 +24,19 @@ export default function ConfirmPassword() {
     };
 
     return (
-        <GuestLayout>
-            <Head title="Confirm Password" />
-
-            <div className="mb-4 text-sm text-gray-600">
+        <Card>
+            <CardHeader>
+            <CardTitle>Konfirmasi Password</CardTitle>
+            <CardDescription>
                 This is a secure area of the application. Please confirm your password before continuing.
-            </div>
-
-            <form onSubmit={submit}>
+            </CardDescription>
+            </CardHeader>
+            <CardContent>
+            <form onSubmit={onHandleSubmit}>
                 <div className="mt-4">
-                    <InputLabel htmlFor="password" value="Password" />
+                    <Label htmlFor="password">Password</Label>
 
-                    <TextInput
+                    <Input
                         id="password"
                         type="password"
                         name="password"
@@ -40,15 +46,29 @@ export default function ConfirmPassword() {
                         onChange={e => setData('password', e.target.value)}
                     />
 
-                    <InputError message={errors.password} className="mt-2" />
+                    {errors.password && (
+                        <InputError message={errors.password}  />
+                    )}
+
+                 
                 </div>
 
                 <div className="mt-4 flex items-center justify-end">
-                    <PrimaryButton className="ms-4" disabled={processing}>
+                    <Button
+                        variant="orange"
+                        size="xl"
+                        disabled={processing}
+                        >
                         Confirm
-                    </PrimaryButton>
+                    </Button>
                 </div>
             </form>
-        </GuestLayout>
+            </CardContent>
+          
+           
+        </Card>
     );
 }
+
+
+ConfirmPassword.layout = (page) => <AppLayout children={page} title="Konfirmasi Password"/>
