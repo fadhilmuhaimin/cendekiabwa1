@@ -1,7 +1,9 @@
+import ApplicationLogo from '@/Components/ApplicationLogo';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
 import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
+import { Button } from '@/Components/ui/button';
 import { Input } from '@/Components/ui/input';
 import { Label } from '@/Components/ui/label';
 import GuestLayout from '@/Layouts/GuestLayout';
@@ -75,7 +77,7 @@ export default function ResetPassword({ token, email }) {
                                     </div>
 
                                     <div className="mt-4">
-                                        <Label htmlFor="password_confirmation">Konfirmasi PAssword</Label>
+                                        <Label htmlFor="password_confirmation">Konfirmasi Password</Label>
 
                                         <Input
                                             type="password"
@@ -105,11 +107,6 @@ export default function ResetPassword({ token, email }) {
 
 
 
-                                <div className="mt-4 flex items-center justify-end">
-                                    <PrimaryButton className="ms-4" disabled={processing}>
-                                        Reset Password
-                                    </PrimaryButton>
-                                </div>
                             </form>
 
 
