@@ -12,7 +12,7 @@ class CategoryController extends Controller
     public function index():Response
     {
         $categories = Category::query()
-            ->select(['id', 'name', 'slug', 'created_at'])
+            ->select(['id', 'name', 'slug','cover', 'created_at'])
             ->get();
         return inertia('Admin/Categories/Index', [
             'categories' => $categories,
